@@ -18,7 +18,7 @@ export default function App() {
   var low_color = [25, 52, 72, 72]
   var high_color = [102, 255, 255, 255]
   var heightV = 450;
-  var widthV = 650;
+  var widthV = 450;
 
   function cambiarCamara() {
     console.log(currentStream)
@@ -149,8 +149,8 @@ export default function App() {
   return (
     <div className='container'>
       <div className="canvasContainer">
-        <video id="video" playsInline autoPlay style={{ display: 'none' }} width="650" height="450" ref={video}></video>
-        <canvas id="canvas" width="650" height="450" ref={canvas1}></canvas>
+        <video id="video" playsInline autoPlay style={{ display: 'none' }} width="450" height="450" ref={video}></video>
+        <canvas id="canvas" width="450" height="450" ref={canvas1}></canvas>
         <canvas id="canvas2" width="130" height="90" ref={canvas2}></canvas>
       </div>
       <div className="optionsContainer">
