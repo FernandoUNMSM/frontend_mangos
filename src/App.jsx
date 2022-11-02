@@ -20,23 +20,15 @@ export default function App() {
   var heightV = 450;
   var widthV = 650;
 
-  const constraints = {
-    audio: false,
-    video: {
-      width: widthV,
-      height: heightV,
-      facingMode: facingMode
-    }
-  }
-
   function cambiarCamara() {
+    console.log(currentStream)
     if (currentStream) {
       currentStream.getTracks().forEach(track => {
         track.stop();
       });
     }
 
-    setFacingMode(facingMode == "user" ? "environment" : "user")
+    setFacingMode(facingMode === "user" ? "environment" : "user")
 
     var opciones = {
       audio: false,
@@ -68,6 +60,14 @@ export default function App() {
   }
 
   useEffect(() => {
+    let constraints = {
+      audio: false,
+      video: {
+        width: widthV,
+        height: heightV,
+        facingMode: facingMode
+      }
+    }
     if (navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia(constraints)
         .then(function (stream) {
