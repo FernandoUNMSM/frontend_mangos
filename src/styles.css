@@ -1,0 +1,75 @@
+
+iframe
+{
+    display: none;
+}
+
+*{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+.canvasContainer{
+  padding: 20px;
+}
+#canvas2{
+  margin-left: 10px;
+}
+.container{
+  display: block;
+  width: fit-content;
+  margin: auto;
+
+}
+canvas {
+  background-color: #000;
+  width: initial;
+  height: auto;
+}
+
+.optionsContainer{
+  padding: 20px;
+}
+.resultContainer{
+  border-top: 1px solid #000;
+  /* padding-top: 20px; */
+}
+.resultContainer > div {
+  height: 50px;
+  background-color:  #ccc;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 10px;
+  width: 120px;
+  transition: .3s;
+  user-select: none;
+}
+.resultContainer > div.on{
+  width: 300px;
+  background-color:  #f5b52c;
+}
+button {
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color:  #98ca26;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  transition: .3s;
+  user-select: none;
+}
+button:hover{
+  filter: brightness(.8);
+}
+h1{
+  color: #f5b52c;
+  font-size: 25px;
+}
