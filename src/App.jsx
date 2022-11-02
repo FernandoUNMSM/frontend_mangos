@@ -23,9 +23,7 @@ export default function App() {
     video: {
       width: widthV,
       height: heightV,
-      facingMode: {
-        exact: 'environment'
-      }
+      facingMode: 'user'
     }
   }
 
