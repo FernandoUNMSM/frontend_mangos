@@ -38,15 +38,22 @@ export default function App() {
     };
 
 
-    navigator.mediaDevices.getUserMedia(opciones)
-      .then(function (stream) {
-        setCurrentStream(stream)
-        video.srcObject = currentStream;
-      })
-      .catch(function (err) {
-        console.log("Oops, hubo un error", err);
-      })
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia(opciones)
+        .then(function (stream) {
+          setCurrentStream(stream)
+          video.current.srcObject = stream;
+          procesar();
+        })
+        .catch(function (err0r) {
+          console.log("Oops, error", err0r);
+        });
+    }
   }
+
+  useEffect(() => {
+    console.log(facingMode)
+  }, [facingMode])
 
   async function loadModel() {
     try {
